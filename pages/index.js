@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 
-import { AddLiquidity, ICOSale, LiquidityHistory } from "../components/index";
+import { AddLiquidity, ICOSale, LiquidityHistory, Header } from "../components/index";
 import { CONTEXT } from "../context/index";
 
 const index = () => {
@@ -28,31 +28,31 @@ const index = () => {
     </div>
 
     {openAddPool && (
-        <div className="new_center">
-          <AddPool 
-          setOpenAddPool={setOpenAddPool} 
-          LOAD_TOKEN={LOAD_TOKEN} 
-          notifyError={notifyError} 
-          notifySuccess={notifySuccess} 
-          GET_POOL_ADDRESS={GET_POOL_ADDRESS}/>
-        </div>
-      )}
+      <div className="new_center">
+        <AddPool
+          setOpenAddPool={setOpenAddPool}
+          LOAD_TOKEN={LOAD_TOKEN}
+          notifyError={notifyError}
+          notifySuccess={notifySuccess}
+          GET_POOL_ADDRESS={GET_POOL_ADDRESS} />
+      </div>
+    )}
 
     {openAllLiquidity && (
-        <div className="new_center">
-          <AddLiquidity 
+      <div className="new_center">
+        <AddLiquidity
           CREATE_LIQUIDITY={CREATE_LIQUIDITY}
           setOpenAllLiquidity={setOpenAllLiquidity}
-          />
-        </div>
-      )}
+        />
+      </div>
+    )}
 
-      {loader && (
-        <div className="new_center">
-          <Loader />
-        </div>
-      )}
-      <Footer />
+    {loader && (
+      <div className="new_center">
+        <Loader />
+      </div>
+    )}
+    <Footer />
   </div>;
 };
 
