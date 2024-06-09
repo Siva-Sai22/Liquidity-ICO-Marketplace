@@ -35,7 +35,7 @@ const Header = ({ setOpenAddPool, setOpenAllLiquidity, connect, address }) => {
                             <a>Coin Market</a>
                         </li>
                         <li className="menu-item-has-children">
-                            <a href="#tokenBuy">Buy Shoyo Token</a>
+                            <a href="#tokenBuy">Buy Woox Token</a>
                         </li>
 
                         {address ? (
