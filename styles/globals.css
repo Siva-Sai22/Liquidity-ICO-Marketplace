@@ -22,7 +22,7 @@
 }
 
 .new_center {
-  z-index: 1111111111111111111111;
+  z-index: 11;
   top: 50%;
   left: 50%;
   position: fixed;
