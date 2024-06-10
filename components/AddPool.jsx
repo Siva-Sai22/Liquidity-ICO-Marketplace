@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PoolInput, SuccessPool, NoPool } from "./index.js";
 
-const AddPool = (
+const AddPool = ({
     setOpenAddPool,
     LOAD_TOKEN,
     notifyError,
     notifySuccess,
     GET_POOL_ADDRESS
-) => {
+}) => {
     const [poolAddress, setPoolAddress] = useState();
-    const [zeroAdd, setZeroAdd] = useState("0x00000000000000000000000000000000000");
+    const [zeroAdd, setZeroAdd] = useState("0x00000000000000000000");
 
     return (
         <section>

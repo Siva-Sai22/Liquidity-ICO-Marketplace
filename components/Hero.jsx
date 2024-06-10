@@ -1,6 +1,6 @@
 import React from "react";
 
-const Hero = ({ tranferNativeToken }) => {
+const Hero = ({ transferNativeToken }) => {
     return (
         <section
             data-settings="particles-1"
@@ -23,7 +23,7 @@ const Hero = ({ tranferNativeToken }) => {
                             </div>
                         </header>
                         <a
-                            onClick={() => tranferNativeToken()}
+                            onClick={() => transferNativeToken()}
                             href="#buyWoox"
                             className="btn btn--large btn--primary btn--transparent"
                         >

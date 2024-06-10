@@ -1,5 +1,6 @@
 import '../styles/globals.css'
-import { CONTEXT_Provider } from '@/context/index'
+
+import { CONTEXT_Provider } from '../context/index'
 import toast, { Toaster } from 'react-hot-toast'
 
 export default function App({ Component, pageProps }) {

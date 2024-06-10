@@ -1,7 +1,6 @@
 import React from "react";
-
 import { HeaderICON } from "./index";
-import {} from "../Utils/index";
+import { shortenAddress } from "../Utils/index";
 
 const Header = ({ setOpenAddPool, setOpenAllLiquidity, connect, address }) => {
     return (
@@ -12,51 +11,51 @@ const Header = ({ setOpenAddPool, setOpenAllLiquidity, connect, address }) => {
                         <img src="img/logo-primary.png" alt="" />
                         <HeaderICON />
                     </a>
+
+                    <nav className="primary-menu" id="primary-menu">
+                        <ul className="primary-menu-menu">
+                            <li>
+                                <a href="/">Home</a>
+                            </li>
+                            <li
+                                onClick={() => setOpenAddPool(true)}
+                                className="menu-item-has-children"
+                            >
+                                <a>Add Pool</a>
+                            </li>
+                            <li
+                                onClick={() => setOpenAllLiquidity(true)}
+                                className="menu-item-has-children"
+                            >
+                                <a>Add Liquidity</a>
+                            </li>
+                            <li className="menu-item-has-children">
+                                <a href="/">Coin Market</a>
+                            </li>
+                            <li className="menu-item-has-children">
+                                <a href="#tokenBuy">Buy Woox Token</a>
+                            </li>
+
+                            {address ? (
+                                <a
+                                    onClick={() =>
+                                        navigator.clipboard.writeText(address)
+                                    }
+                                    className="btn btn--large btn--primary btn--transparent"
+                                >
+                                    {shortenAddress(address)}
+                                </a>
+                            ) : (
+                                <a
+                                    onClick={() => connect()}
+                                    className="btn btn--large btn--primary btn--transparent"
+                                >
+                                    Connect
+                                </a>
+                            )}
+                        </ul>
+                    </nav>
                 </div>
-
-                <nav id="primary-menu" className="primary-menu">
-                    <ul className="primary-menu-menu">
-                        <li className="menu-item-has-children">
-                            <a href="/">Home</a>
-                        </li>
-                        <li
-                            onClick={() => setOpenAddPool(true)}
-                            className="menu-item-has-children"
-                        >
-                            <a>Add Pool</a>
-                        </li>
-                        <li
-                            onClick={() => setOpenAllLiquidity(true)}
-                            className="menu-item-has-children"
-                        >
-                            <a>Add Liquidity</a>
-                        </li>
-                        <li className="menu-item-has-children">
-                            <a>Coin Market</a>
-                        </li>
-                        <li className="menu-item-has-children">
-                            <a href="#tokenBuy">Buy Woox Token</a>
-                        </li>
-
-                        {address ? (
-                            <a
-                                onClick={() =>
-                                    navigator.clipboard.writeText(address)
-                                }
-                                className="btn btn--large btn--primary btn--transparent"
-                            >
-                                {shortenAddress(address)}
-                            </a>
-                        ) : (
-                            <a
-                                onClick={() => connect()}
-                                className="btn btn--large btn--primary btn--transparent"
-                            >
-                                Connect
-                            </a>
-                        )}
-                    </ul>
-                </nav>
             </div>
         </header>
     );

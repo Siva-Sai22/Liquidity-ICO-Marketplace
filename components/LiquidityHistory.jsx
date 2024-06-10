@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { shortenAddress } from "../Utils/index";
 
 const LiquidityHistory = ({ GET_ALL_LIQUIDITY }) => {
-    const [Liquidity, setLiquidity] = useState([]);
+    const [liquidity, setLiquidity] = useState([]);
 
     useEffect(() => {
         try {

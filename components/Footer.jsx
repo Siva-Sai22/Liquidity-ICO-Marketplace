@@ -6,7 +6,7 @@ import {
     TiSocialTwitter,
     TiSocialFacebook,
 } from "react-icons/ti";
-import { FooterIcon } from "./index";
+import { FooterICON } from "./index";
 
 const Footer = () => {
     const social = [
@@ -46,7 +46,7 @@ const Footer = () => {
                         <div className="widget w-info">
                             <a href="/" className="site-logo">
                                 <img src="img/logo-primary.png" alt="" />
-                                <FooterIcon />
+                                <FooterICON />
                             </a>
                             <p>
                                 Lorem ipsum, dolor sit amet consectetur

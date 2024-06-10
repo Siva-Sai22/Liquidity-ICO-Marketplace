@@ -3,7 +3,7 @@ import {
   Header,
   Footer,
   Hero,
-  ICOToken,
+  ICOTokens,
   LiquidityHistory,
   ICOSale,
   Access,
@@ -16,9 +16,10 @@ import {
   Loader,
   Input,
   PoolInput,
-  HeaderIcon,
-  FooterIcon,
+  HeaderICON,
+  FooterICON,
 } from '../components/index'
+
 import { CONTEXT } from '../context/index'
 
 const index = () => {
@@ -37,7 +38,7 @@ const index = () => {
     address,
     loader,
     DAPP_NAME,
-  } = useContext(CONTEXT)
+  } = useContext(CONTEXT);
 
   const [openAddPool, setOpenAddPool] = useState(false)
   const [openAllLiquidity, setOpenAllLiquidity] = useState(false)
@@ -52,7 +53,7 @@ const index = () => {
 
       <div className='main-content-wrapper'>
         <Hero transferNativeToken={transferNativeToken} />
-        <ICOToken />
+        <ICOTokens />
         <LiquidityHistory GET_ALL_LIQUIDITY={GET_ALL_LIQUIDITY} />
         <App />
         <Analytic />

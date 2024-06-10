@@ -45,7 +45,7 @@ const PoolInput = ({
             return notifyError("Provide all details");
         } else {
             const pool = await GET_POOL_ADDRESS(token_1, token_2, fee);
-            setPoolAddress(pool[0]);
+            if(pool) setPoolAddress(pool[0]);
         }
     };
     return (
